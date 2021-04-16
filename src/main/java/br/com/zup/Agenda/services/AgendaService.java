@@ -8,12 +8,13 @@ import java.util.Map;
 public class AgendaService {
 
     Map<String, String> agenda = Map.of("kaio", "123456789", "fabricio", "987654321");
+    // Método para passar os elementos e retornar com uma lista como resultado.
 
     public Telefone serviceAgenda(String nome) {
 
-        Telefone contato = new Telefone();
+        Telefone contato = new Telefone();// Objeto criado para receber os getter/setter.
 
-        if (agenda.containsKey(nome)) {
+        if (agenda.containsKey(nome)) {// método para verificar se o objeto definido é o mesmo da lista gerada pelo Map.
             contato.setNome(nome);
             contato.setTelefone(agenda.get(nome));
         }
